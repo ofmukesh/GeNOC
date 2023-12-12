@@ -7,7 +7,7 @@ import NavBar from "./components/common/Navbar";
 import Error404 from "./pages/error/404";
 import DownloadNOC from "./pages/noc/DownloadNOC";
 import { Footer } from "./components/common/Footer";
-import AuthToken from "./components/common/AuthToken";
+import AuthToken from "./api/auth/authToken";
 import ContactUs from "./pages/ContactUs";
 
 function PrivateRoute() {

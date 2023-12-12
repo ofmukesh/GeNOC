@@ -2,8 +2,9 @@ import { Fragment, useEffect, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, useLocation } from "react-router-dom";
-import AuthToken from "./AuthToken";
+import AuthToken from "../../api/auth/authToken";
 import LogoImage from "../../assets/logo.png";
+import authLogout from "../../api/auth/authLogout";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -126,15 +127,15 @@ export default function NavBar() {
                         </Menu.Item>
                         <Menu.Item>
                           {({ active }) => (
-                            <Link
-                              to="#"
+                            <button
+                              onClick={authLogout}
                               className={classNames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                "block px-4 py-2 text-sm text-gray-700 w-full text-left"
                               )}
                             >
                               Sign out
-                            </Link>
+                            </button>
                           )}
                         </Menu.Item>
                       </Menu.Items>

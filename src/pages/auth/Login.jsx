@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import LogoImage from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import authSignIn from "../../api/auth/authSignIn";
+import AuthToken from "../../api/auth/authToken";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (AuthToken()) {
+      return navigate("/");
+    }
+  }, [navigate]);
+
   function handleSingIn(e) {
     e.preventDefault();
+    authSignIn().then(() => {
+      return navigate("/");
+    });
   }
   return (
     <>
@@ -25,15 +38,15 @@ const Login = () => {
               <form className="space-y-4 md:space-y-6" onSubmit={handleSingIn}>
                 <div>
                   <label
-                    htmlFor="email"
+                    htmlFor="reg_no"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Reg no.
                   </label>
                   <input
-                    type="email"
-                    name="email"
-                    id="email"
+                    type="number"
+                    name="reg_no"
+                    id="reg_no"
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="0123456789"
                     required
