@@ -8,9 +8,10 @@ import Error404 from "./pages/error/404";
 import DownloadNOC from "./pages/noc/DownloadNOC";
 import { Footer } from "./components/common/Footer";
 import AuthToken from "./components/common/AuthToken";
+import ContactUs from "./pages/ContactUs";
 
 function PrivateRoute() {
-  if (!AuthToken) {
+  if (!AuthToken()) {
     return <Navigate to="/login" />;
   }
   return (
@@ -31,6 +32,7 @@ function App() {
     <div>
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route element={<PrivateRoute />}>
           <Route path="/" element={<Home />} />
           <Route path="/create-noc" element={<CreateNOC />} />
