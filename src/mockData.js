@@ -1,7 +1,7 @@
 const dummyStudentData = {
   name: "John Doe",
   fatherName: "Doe Sr.",
-  dob: "1998-05-15",
+  dateOfBirth: "1998-05-15",
   mobileNo: "1234567890",
   email: "john.doe@example.com",
   registrationNo: 12345,
