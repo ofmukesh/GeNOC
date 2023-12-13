@@ -5,7 +5,7 @@ const ContactUs = () => {
   return (
     <>
       <section className="bg-white dark:bg-gray-900 min-h-screen">
-        <div className="p-2">
+        <div className="p-3">
           <HomeIcon />
         </div>
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
