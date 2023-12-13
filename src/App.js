@@ -9,6 +9,7 @@ import DownloadNOC from "./pages/noc/DownloadNOC";
 import { Footer } from "./components/common/Footer";
 import AuthToken from "./api/auth/authToken";
 import ContactUs from "./pages/ContactUs";
+import Profile from "./pages/Profile";
 
 function PrivateRoute() {
   if (!AuthToken()) {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route element={<PrivateRoute />}>
           <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/create-noc" element={<CreateNOC />} />
           <Route path="/download-noc" element={<DownloadNOC />} />
           <Route path="*" element={<Error404 />} />
