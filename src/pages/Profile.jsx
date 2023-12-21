@@ -19,79 +19,67 @@ const Profile = () => {
 
   console.log(student);
   return (
-    <div className="p-4 md:p-8">
-      {/* cards */}
-      <div className="md:flex flex-row gap-2 ">
-        {/* card-1 */}
-        <div className="md:w-1/2 sm:mt-0 mt-4 bg-gray-200 rounded p-4">
-          {/* name */}
-          <div className="mt-1 flex flex-row text-center">
-            <div className="w-1/3 font-semibold">Name</div>
-            <div className="w-1/3 font-semibold">:</div>
-            <div className="w-1/3 ms-1"> {student.name}</div>
-          </div>
-          {/* father name */}
-          <div className="mt-1 flex flex-row text-center text-gray-700">
-            <div className="w-1/3 font-semibold">Father Name</div>
-            <div className="w-1/3 font-semibold">:</div>
-            <div className="w-1/3 ms-1"> {student.fatherName}</div>
-          </div>
-          {/* DOB */}
-          <div className="mt-1 flex flex-row text-center text-gray-700">
-            <div className="w-1/3 font-semibold">Date of Birth</div>
-            <div className="w-1/3 font-semibold">:</div>
-            <div className="w-1/3 ms-1"> {student.dateOfBirth}</div>
-          </div>
-          {/* email */}
-          <div className="mt-1 flex flex-row text-center text-gray-700">
-            <div className="w-1/3 font-semibold">Email</div>
-            <div className="w-1/3 font-semibold">:</div>
-            <div className="w-1/3 ms-1"> {student.email}</div>
-          </div>
-          {/* mobile no. */}
-          <div className="mt-1 flex flex-row text-center text-gray-700">
-            <div className="w-1/3 font-semibold">Mobile no.</div>
-            <div className="w-1/3 font-semibold">:</div>
-            <div className="w-1/3 ms-1"> {student.mobileNo}</div>
-          </div>
-        </div>
-        {/* card-2 */}
-        <div className="md:w-1/2 sm:mt-0 mt-4 bg-gray-200 rounded p-4">
-          {/* reg no. */}
-          <div className="mt-1 flex flex-row text-center text-gray-700">
-            <div className="w-1/3 font-semibold">Registration no.</div>
-            <div className="w-1/3 font-semibold">:</div>
-            <div className="w-1/3 ms-1"> {student.registrationNo}</div>
-          </div>
-          {/* roll no. */}
-          <div className="mt-1 flex flex-row text-center text-gray-700">
-            <div className="w-1/3 font-semibold">Roll no.</div>
-            <div className="w-1/3 font-semibold">:</div>
-            <div className="w-1/3 ms-1"> {student.rollNo}</div>
-          </div>
-          {/* branch */}
-          <div className="mt-1 flex flex-row text-center text-gray-700">
-            <div className="w-1/3 font-semibold">Branch</div>
-            <div className="w-1/3 font-semibold">:</div>
-            <div className="w-1/3 ms-1"> {student.branch}</div>
-          </div>
-          {/* Admission Year */}
-          <div className="mt-1 flex flex-row text-center text-gray-700">
-            <div className="w-1/3 font-semibold">Admission Year</div>
-            <div className="w-1/3 font-semibold">:</div>
-            <div className="w-1/3 ms-1"> {student.admissionYear}</div>
-          </div>
-          {/* last login */}
-          <div className="mt-1 flex flex-row text-center text-gray-700">
-            <div className="w-1/3 font-semibold">last login</div>
-            <div className="w-1/3 font-semibold">:</div>
-            <div className="w-1/3 ms-1">
-              <i>{student.lastLogin}</i>
+    <section className="min-h-screen">
+      <div className="container mx-auto flex justify-center items-center min-h-screen">
+        <h6 style={{ writingMode: 'vertical-rl' }} className="text-5xl font-bold rotate-180 mr-12">Your Profile</h6>
+        <div className="w-10/12 bg-gray-200 p-4 rounded-md">
+          <div className="card mb-3">
+            <div className="flex items-center">
+              <div className="w-full items-center justify-center">
+                <div className="p-4">
+                  <h6 className="text-3xl font-bold my-4 underline">Personal Information</h6>
+                  <div className="flex flex-wrap">
+                    <div className="w-1/2 my-3 text-center flex items-center justify-between px-8">
+                      <p className="font-semibold text-xl">Name</p>
+                      <p className="text-gray-600">{student.name}</p>
+                    </div>
+                    <div className="w-1/2 my-3 text-center flex items-center justify-between px-8">
+                      <p className="font-semibold text-xl">Father Name</p>
+                      <p className="text-gray-600">{student.fatherName}</p>
+                    </div>
+                    <div className="w-1/2 my-3 text-center flex items-center justify-between px-8">
+                      <p className="font-semibold text-xl">Date of Birth</p>
+                      <p className="text-gray-600">{student.dateOfBirth}</p>
+                    </div>
+                    <div className="w-1/2 my-3 text-center flex items-center justify-between px-8">
+                      <p className="font-semibold text-xl">Email</p>
+                      <p className="text-gray-600">{student.email}</p>
+                    </div>
+                    <div className="w-1/2 my-3 text-center flex items-center justify-between px-8">
+                      <p className="font-semibold text-xl">Mobile No.</p>
+                      <p className="text-gray-600">{student.mobileNo}</p>
+                    </div>
+                  </div>
+                  <h6 className="text-3xl font-bold my-4 underline">Academic Information</h6>
+                  <div className="flex flex-wrap">
+                    <div className="w-1/2 my-3 text-center flex items-center justify-between px-8">
+                      <p className="font-semibold text-xl">Registration No.</p>
+                      <p className="text-gray-600">{student.registrationNo}</p>
+                    </div>
+                    <div className="w-1/2 my-3 text-center flex items-center justify-between px-8">
+                      <p className="font-semibold text-xl">Roll No.</p>
+                      <p className="text-gray-600">{student.rollNo}</p>
+                    </div>
+                    <div className="w-1/2 my-3 text-center flex items-center justify-between px-8">
+                      <p className="font-semibold text-xl">Branch</p>
+                      <p className="text-gray-600">{student.branch}</p>
+                    </div>
+                    <div className="w-1/2 my-3 text-center flex items-center justify-between px-8">
+                      <p className="font-semibold text-xl">Admission Year</p>
+                      <p className="text-gray-600">{student.admissionYear}</p>
+                    </div>
+                    <div className="w-1/2 my-3 text-center flex items-center justify-between px-8">
+                      <p className="font-semibold text-xl">Last Login</p>
+                      <p className="text-gray-600">{student.lastLogin}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
