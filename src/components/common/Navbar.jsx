@@ -38,7 +38,7 @@ export default function NavBar() {
       case "/about":
         return onTabChange(navigation[3]);
       default:
-        return;
+        return onTabChange("");
     }
   }, [current_pathname]);
 
