@@ -26,55 +26,55 @@ const Profile = () => {
             <div className="flex items-center">
               <div className="w-full items-center justify-center">
                 <div className="p-2">
-                  <h6 className="text-xl font-bold my-2">
+                  <h6 className="text-[18px] font-bold mt-2">
                     Personal Information
                   </h6>
                   <hr className="border-[1px] border-gray-400 mb-2" />
                   <div className="md:flex flex-wrap">
                     <div className="md:w-1/2 my-2 text-center flex items-center justify-between md:px-8">
-                      <p className="font-semibold">Name</p>
+                      <p className="text-black">Name</p>
                       <p className="text-gray-600">{student.name}</p>
                     </div>
                     <div className="md:w-1/2 my-2 text-center flex items-center justify-between md:px-8">
-                      <p className="font-semibold">Father Name</p>
+                      <p className="text-black">Father Name</p>
                       <p className="text-gray-600">{student.fatherName}</p>
                     </div>
                     <div className="md:w-1/2 my-2 text-center flex items-center justify-between md:px-8">
-                      <p className="font-semibold">Date of Birth</p>
+                      <p className="text-black">Date of Birth</p>
                       <p className="text-gray-600">{student.dateOfBirth}</p>
                     </div>
                     <div className="md:w-1/2 my-2 text-center flex items-center justify-between md:px-8">
-                      <p className="font-semibold">Email</p>
+                      <p className="text-black">Email</p>
                       <p className="text-gray-600">{student.email}</p>
                     </div>
                     <div className="md:w-1/2 my-2 text-center flex items-center justify-between md:px-8">
-                      <p className="font-semibold">Mobile No.</p>
+                      <p className="text-black">Mobile No.</p>
                       <p className="text-gray-600">{student.mobileNo}</p>
                     </div>
                   </div>
-                  <h6 className="text-xl font-bold mt-5">
+                  <h6 className="text-[18px] font-bold mt-5">
                     Academic Information
                   </h6>
                   <hr className="border-[1px] border-gray-400 mb-2" />
                   <div className="md:flex flex-wrap">
                     <div className="md:w-1/2 my-2 text-center flex items-center justify-between md:px-8">
-                      <p className="font-semibold">Registration No.</p>
+                      <p className="text-black">Registration No.</p>
                       <p className="text-gray-600">{student.registrationNo}</p>
                     </div>
                     <div className="md:w-1/2 my-2 text-center flex items-center justify-between md:px-8">
-                      <p className="font-semibold">Roll No.</p>
+                      <p className="text-black">Roll No.</p>
                       <p className="text-gray-600">{student.rollNo}</p>
                     </div>
                     <div className="md:w-1/2 my-2 text-center flex items-center justify-between md:px-8">
-                      <p className="font-semibold">Branch</p>
+                      <p className="text-black">Branch</p>
                       <p className="text-gray-600">{student.branch}</p>
                     </div>
                     <div className="md:w-1/2 my-2 text-center flex items-center justify-between md:px-8">
-                      <p className="font-semibold">Admission Year</p>
+                      <p className="text-black">Admission Year</p>
                       <p className="text-gray-600">{student.admissionYear}</p>
                     </div>
                     <div className="md:w-1/2 my-2 text-center flex items-center justify-between md:px-8">
-                      <p className="font-semibold">Last Login</p>
+                      <p className="text-black">Last Login</p>
                       <p className="text-gray-600">{student.lastLogin}</p>
                     </div>
                   </div>
